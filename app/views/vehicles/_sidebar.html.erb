@@ -1,0 +1,7 @@
+<table class="sidebar">
+	<% @vehicles.each do |vehicle| %>
+		<tr>
+			<td><%= link_to vehicle.plate.upcase, vehicle %></td>
+			<td><%= vehicle.year %> <%= vehicle.make.upcase.humanize %> <%= vehicle.model.capitalize %></td>
+	<% end %>
+</table>

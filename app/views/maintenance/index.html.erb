@@ -1,0 +1,16 @@
+<h1>Maintenance Log</h1>
+
+<p>What'd you fix son?</p>
+
+<%= render 'maint/new_maint' %>
+<br><table class="sidebar">
+	<% @maints.each do |m| %>
+	<tr>
+		<td><%= link_to m.invoice, m.invoice %></td>
+		<td><%= m.date %></td>
+		<td><%= m.category %></td>
+		<td><%= m.serviced_by %></td>
+		<td>$<%= m.cost %></td>
+	</tr>
+	<% end %>
+</table>

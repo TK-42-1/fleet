@@ -1,0 +1,39 @@
+<div class="vehicle_new">
+<%= form_for(@vehicle) do |f| %>
+	<div class="field">
+		<%= f.label :make %> 
+		<%= f.text_field :make %><br>
+	</div>	
+	<div class="field">
+		<%= f.label :model %> 
+		<%= f.text_field :model %><br>
+	</div>	
+	<div class="field">
+		<%= f.label :year %> 
+		<%= f.text_field :year %><br>
+	</div>	
+	<div class="field">
+		<%= f.label :plate %> 
+		<%= f.text_field :plate %><br>
+	</div>	
+	<div class="field">
+		<%= f.label :vin %> 
+		<%= f.text_field :vin %><br>
+	</div>	
+	<div class="field">
+		<%= f.label :book %> 
+		<%= f.text_field :book %><br>
+	</div>	
+	<div class="field">
+		<%= f.label :title %> 
+		<%= f.text_field :title %><br>
+	</div>
+	<div class="field">
+		<%= f.label :status %> 
+		<%= f.text_field :status %><br>
+	</div>	
+	<div class="actions">
+		<%= f.submit "Submit" %>
+	</div>	
+<% end %>
+</div>

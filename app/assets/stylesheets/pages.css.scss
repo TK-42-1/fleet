@@ -1,0 +1,69 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* nav bar styling */
+
+nav {
+	position: absolute;
+	right:20px;
+	top: 25px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #000;
+	background: #fff;	
+}
+
+nav a {
+	text-decoration: none;
+	color: #000;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+nav a:hover {
+	color: #fff;
+	background: #000;
+}
+
+/* main body styling */
+
+
+
+menu {
+	font-size: 250%;
+
+}
+
+menu a {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #000;	
+	text-decoration: none;
+	display: inline;
+	float: center;
+}
+
+menu a:visited {
+	color: #000;
+}
+
+menu a:hover {
+	color: #fff;
+	background: #000;
+}
+
+menu a:visited:hover {
+	color: #fff;
+}
+
+.slogan {
+	font-size: 10pt;
+	font-style: italic;
+	text-align: center;
+}

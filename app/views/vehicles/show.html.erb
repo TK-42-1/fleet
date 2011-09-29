@@ -1,0 +1,23 @@
+<h2><%= @vehicle.year %> <%= @vehicle.make.capitalize %> <%= @vehicle.model.capitalize %></h2>
+
+<h3>Status: <%= @vehicle.status.upcase %></h3>
+<table class="vehicle">
+	<tr>
+		<td>Plate: </td>
+		<td><%= @vehicle.plate.upcase %></td>
+	</tr>
+	<tr>
+		<td>VIN: </td>
+		<td><%= @vehicle.vin.upcase %></td>
+	</tr>
+	<tr>
+		<td>Book: </td>
+		<td><%= @vehicle.book.capitalize %></td>
+	</tr>
+	<tr>
+		<td>Title: </td>
+		<td><%= @vehicle.title.capitalize %></td>
+	</tr>
+</table>
+
+<%= render 'sidebar' %>
