@@ -1,7 +1,4 @@
-<h2>Work Order Entry</h2>
-
-<div>
-<% form_for(:maint)  do |f| %>
+<% form_for(:maintenance)  do |f| %>
 	<div class="field">
 		<%= f.label :invoice %> 
 		<%= f.text_field :invoice %><br>
@@ -34,4 +31,3 @@
 		<%= f.submit "Submit" %>
 	</div>
 <% end %>
-</div>

@@ -1,23 +1,23 @@
 class VehiclesController < ApplicationController
   def index
-    @vehicles = Vehicle.all
+    @vehicles = Vehicles.all
     @title = "Vehicles"
   end
 
   def new
-    @vehicle = Vehicle.new
+    @vehicle = Vehicles.new
     @title = "New Vehicle"
   end
   
   def show
-    @vehicle = Vehicle.find(params[:id])
-    @vehicles = Vehicle.all
+    @vehicles = Vehicles.find(params[:id])
+    @title = @vehicle.year
   end
   
   def create
-    @vehicle = Vehicle.new(params[:vehicle])
+    @vehicle = Vehicles.new(params[:vehicles])
     if @vehicle.save
-      redirect_to @vehicle, :flash => {:success => "New vehicle created" }
+      redirect_to @vehicle
     else
       render 'new'
     end  

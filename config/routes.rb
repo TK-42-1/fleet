@@ -1,25 +1,16 @@
 Fleet::Application.routes.draw do
-  get "maintenance/new"
+  resources :vehicles
+  resources :maintenance, :only => [:index, :new, :create]
 
-  get "maintenance/show"
+  root :to => 'pages#home'
 
-  get "maintenance/create"
+  match '/vehicles' => 'vehicles#index'
+  match '/vehicles/:id' => 'vehicles#show'
+  match '/maintenance' => 'maintenance#index'
+  match '/maintenance/:id' => 'maintenance#show'
+  match '/reports' => 'pages#reports'
+  match '/signin' => 'pages#signin'
 
-  get "maintenance/destroy"
-
-  get "pages/vehicles"
-
-  get "pages/maintenance"
-
-  get "vehicles/new"
-
-  get "vehicles/create"
-
-  get "vehicles/show"
-
-  get "vehicles/destroy"
-
-  get "pages/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

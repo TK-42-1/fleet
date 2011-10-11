@@ -1,14 +1,7 @@
 class MaintenanceController < ApplicationController
     def index
       @maints = Maintenance.all    
-      @title = "Maintenance"    
-      @new_maint = Maintenance.new    
-      @maint = Maintenance.new(params[:maint])
-       if @maint.save
-         redirect_to @maint, :flash => {:success => "New maintenance record created" }
-       else
-         render 'new'
-       end
+      @title = "Maintenance"        
     end
 
     def new
@@ -17,13 +10,7 @@ class MaintenanceController < ApplicationController
 
     end
 
-    def show
-      @maint = Maintenance.find(params[:id])
-      @maints = Maintenance.all
-    end
-
-
-    def create
+   def create
       @maint = Maintenance.new(params[:maint])
        if @maint.save
          redirect_to @maint, :flash => {:success => "New maintenance record created" }
